@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:context="http://www.springframework.org/schema/context"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <import resource="spring-jdbc-context.xml"/>
-
-    <context:annotation-config/>
-    <context:component-scan base-package="com.arekusu.datamover"/>
-
-    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
-
-    <bean id="modelReader" class="com.arekusu.datamover.model.XMLFileModelReader">
-        <property name="model" value="classpath:/testModel.xml"/>
-    </bean>
 
     <bean id="main" class="com.arekusu.datamover.console.MoverApp">
         <property name="dataMoversMap">
@@ -22,6 +12,10 @@
                 <entry key="export" value-ref="exportDataMover"/>
             </map>
         </property>
+    </bean>
+
+    <bean id="modelReader" class="com.arekusu.datamover.model.XMLFileModelReader">
+        <property name="model" value="classpath:/testModel.xml"/>
     </bean>
 
     <bean id="importDataMover" class="com.arekusu.datamover.DataMover">

@@ -12,7 +12,6 @@ public class MoverApp {
 
     private static Logger logger = LoggerFactory.getLogger(MoverApp.class);
 
-
     Map<String, DataMover> dataMoversMap;
 
     public static void main(String[] args) {
