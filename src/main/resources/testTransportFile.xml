@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Directory>
+    <Customer>
+        <Alias>JD</Alias>
+        <FirstName>Jack</FirstName>
+        <LastName>Daniel</LastName>
+        <Account>
+            <Code>C1</Code>
+            <Type>Checking</Type>
+            <Number>123</Number>
+        </Account>
+        <Order>
+            <Summary>Wheat</Summary>
+            <Notes>should be fresh</Notes>
+        </Order>
+    </Customer>
+    <Customer>
+        <Alias>Bro</Alias>
+        <FirstName>Mario</FirstName>
+        <LastName>Cabrone</LastName>
+        <Account>
+            <Code>C2</Code>
+            <Type>Savings</Type>
+            <Number>456</Number>
+        </Account>
+        <Order>
+            <Summary>NES</Summary>
+            <Notes>special offer</Notes>
+        </Order>
+    </Customer>
+    <Customer>
+        <Alias>Bit</Alias>
+        <FirstName>Takeshi</FirstName>
+        <LastName>Kitano</LastName>
+        <Account>
+            <Code>C3</Code>
+            <Type>PopMoney</Type>
+            <Number>789</Number>
+        </Account>
+        <Order>
+            <Summary>Sword</Summary>
+            <Notes>promo pack</Notes>
+        </Order>
+    </Customer>
+</Directory>

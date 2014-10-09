@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelType version="1.0" xmlns="http://www.arekusu.com">
+    <DefinitionType rootElement="Directory">
+    <EntityType alias="Customer">
+            <FieldsType schema="PUBLIC" table="CUSTOMERS">
+                <FieldType alias="Alias" column="ALIAS"/>
+                <FieldType alias="FirstName" column="FIRST_NAME"/>
+                <FieldType alias="LastName" column="LAST_NAME"/>
+            </FieldsType>
+            <ReferencesType>
+                <EntityType alias="Order" sourceField="Alias" destinationField="USER">
+                    <FieldsType schema="PUBLIC" table="ORDERS">
+                        <FieldType alias="Summary" column="SUMMARY"/>
+                        <FieldType alias="Notes" column="NOTES"/>
+                    </FieldsType>
+                </EntityType>
+            </ReferencesType>
+            <LinksType>
+                <EntityType alias="Account" sourceField="Code" destinationField="ACCOUNT_CODE">
+                    <FieldsType schema="PUBLIC" table="ACCOUNTS">
+                        <FieldType alias="Code" column="CODE"/>
+                        <FieldType alias="Type" column="TYPE"/>
+                        <FieldType alias="Number" column="NUMBER"/>
+                    </FieldsType>
+                </EntityType>
+            </LinksType>
+        </EntityType>
+    </DefinitionType>
+</ModelType>

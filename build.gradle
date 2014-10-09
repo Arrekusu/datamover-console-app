@@ -1,0 +1,20 @@
+archivesBaseName = "datamover-console-app"
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'com.arekusu.datamover', name: 'datamover-core', version: '0.1.0'
+    compile group: 'org.springframework', name: 'spring-core', version: '4.0.7.RELEASE'
+    compile group: 'org.springframework', name: 'spring-beans', version: '4.0.7.RELEASE'
+    compile group: 'org.springframework', name: 'spring-context', version: '4.0.7.RELEASE'
+    compile group: 'org.springframework', name: 'spring-jdbc', version: '4.0.7.RELEASE'
+    compile group: 'com.h2database', name: 'h2', version: '1.4.181'
+    compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0.1'
+}
+
